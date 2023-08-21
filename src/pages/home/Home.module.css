@@ -1,0 +1,19 @@
+.Home {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #000;
+    margin: 20px;
+    background: #81ac9a;
+    font-size: 50px;
+    text-align: center;
+}
+
+img {
+    align-items: center;
+}
+
+p {
+    align-content: center;
+    font-weight: 900;
+
+}
