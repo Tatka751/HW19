@@ -1,11 +1,9 @@
-
-
 import uuid4 from "uuid4";
 import styles from "./components/Contact/Contact.module.css";
 import { useState, useEffect } from "react";
 import { CardContact } from "./components/Contact/Contact";
 
-function Contacts() {
+function App() {
   const [state, setState] = useState({
     contacts: [
       {
@@ -127,23 +125,14 @@ function Contacts() {
 
   return (
     <>
-      <div className={styles["search"]}>
-        {" "}
-        Введіть дані для пошуку:
-        <input id="search" name="search" onChange={handleSearchChange} />
-       
-      </div>
+
       <div className="App">
-        {!state.result
-          ? state.contacts.map((contacts) => (
+      {state.contacts.map((contacts) => (
               <CardContact key={contacts.id} data={contacts} />
-            ))
-          : state.result.map((result) => (
-              <CardContact key={result.id} data={data} />
             ))}
       </div>
     </>
   );
 }
 
-export default Contacts;
+export default App;
