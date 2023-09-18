@@ -1,9 +1,16 @@
-import home from './img/home.jpg'
 import styles from './Home.module.css'
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-    return <> <div className={styles['Home']}><h1 >Homework #19 React Routers</h1>
-        <img src={home} alt='' />
+        const { t } = useTranslation();
+
+        let aboutMe = t('about')
+        console.log(aboutMe)
+    return <> <div className={styles['Home']} ><h1>{aboutMe}</h1>
+        <div>
+        {/* <img src={home} alt='' /> */}
+       
+        </div>
     </div>
     </>
 }
